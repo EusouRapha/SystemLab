@@ -1,8 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
-const ImageDropbox = ({ onImageUpload }) => {
+const ImageDropbox = ({ onImageUpload, savedLab }) => {
   const [isUploadSuccess, setIsUploadSuccess] = useState(false);
+
+  useEffect(() => {
+    setIsUploadSuccess(false);
+  }, [savedLab]);
 
   const onDrop = useCallback(
     (acceptedFiles) => {

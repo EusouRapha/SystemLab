@@ -34,9 +34,13 @@
 }
 
 .input{
+    display: flex;
     border: none;
+    padding: 0;
     border-bottom: 2px solid #1053b7;
     width: 100%;
+    font-size: 20px;
+    padding-top: 20px;
 }
 
 .button{
@@ -56,4 +60,24 @@
     background-color: #1053B7;
     color: white;
     transition: 0.3s ease-in-out;
+}
+
+.buttonDesactive{
+    padding: 20px;
+    margin-top: 30px;
+    border: 2px solid #1053B7;
+    background-color: #979797 !important;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.saved{
+    font-size: 20px;
+    font-weight: 500;
+    color: green;
 }

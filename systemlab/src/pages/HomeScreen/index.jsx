@@ -6,12 +6,12 @@ function HomeScreen() {
     <div className={styles.container}>
       <h1 className={styles.title}>Olá, gestor</h1>
       <div className={styles.buttonContainer}>
-        <button className={styles.button}>
-          <Link to="/cadastrarlaboratorios">Cadastrar Laboratórios</Link>
-        </button>
-        <button className={styles.button}>
-          <Link to="/visualizarlaboratorios">Visualizar Laboratórios</Link>
-        </button>
+        <Link to="/cadastrarlaboratorios" className={styles.link}>
+          Cadastrar Laboratórios
+        </Link>
+        <Link to="/visualizarlaboratorios" className={styles.link}>
+          Visualizar Laboratórios
+        </Link>
       </div>
     </div>
   );

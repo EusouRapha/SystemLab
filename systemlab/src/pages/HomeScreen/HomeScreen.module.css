@@ -20,8 +20,11 @@
     gap: 80px;
 }
 
-.button{
+.link{
     padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     border: 2px solid #1053B7;
     border-radius: 20px;
@@ -33,14 +36,9 @@
     transition: 0.3s ease-in-out;
 }
 
-.button:hover{
-    background-color: #c0c0c0;
+.link:hover{
+    background-color: #1053B7;
     color: white;
     transition: 0.3s ease-in-out;
-}
-
-.button a{
-    text-decoration: none;
-    color: #1053B7
 }
 
