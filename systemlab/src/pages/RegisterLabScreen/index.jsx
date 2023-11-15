@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import styles from "./RegisterLabScreen.module.css";
 import ImageDropbox from "../components/imageDropbox";
+import addMock from "../../utils/mock";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
 
 function RegisterLabScreen() {
   const [name, setName] = useState("");
@@ -17,7 +19,7 @@ function RegisterLabScreen() {
   }, [name, description, image]);
 
   const onSave = () => {
-    // aqui salva no mock
+    addMock(name, description, image);
 
     var resposta = window.confirm(
       "Cadastro bem-sucedido! Clique em OK para continuar."
@@ -48,40 +50,41 @@ function RegisterLabScreen() {
   };
 
   return (
-    <div className={styles.container}>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <div className={styles.innerContainer}>
-        <h1 className={styles.title}>Cadastrar Laboratório</h1>
-        <p className={styles.dropboxTitle}>Adicione uma foto</p>
-        <ImageDropbox onImageUpload={handleImageUpload} savedLab={saved} />
-        <div className={styles.inputContainer}>
-          <p className={styles.inputTitle}>Nome:</p>
-          <input
-            type="text"
-            className={styles.input}
-            onChange={saveName}
-            value={name}
-          />
+    <>
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.innerContainer}>
+          <h1 className={styles.title}>Cadastrar Laboratório</h1>
+          <p className={styles.dropboxTitle}>Adicione uma foto</p>
+          <ImageDropbox onImageUpload={handleImageUpload} savedLab={saved} />
+          <div className={styles.inputContainer}>
+            <p className={styles.inputTitle}>Nome:</p>
+            <input
+              type="text"
+              className={styles.input}
+              onChange={saveName}
+              value={name}
+            />
+          </div>
+          <div className={styles.inputContainer}>
+            <p className={styles.inputTitle}>Descrição:</p>
+            <input
+              type="text"
+              className={styles.input}
+              onChange={saveDescription}
+              value={description}
+            />
+          </div>
+          <button
+            className={shouldSave ? styles.button : styles.buttonDesactive}
+            onClick={() => onSave()}
+          >
+            Salvar
+          </button>
         </div>
-        <div className={styles.inputContainer}>
-          <p className={styles.inputTitle}>Descrição:</p>
-          <input
-            type="text"
-            className={styles.input}
-            onChange={saveDescription}
-            value={description}
-          />
-        </div>
-        <button
-          className={shouldSave ? styles.button : styles.buttonDesactive}
-          onClick={() => onSave()}
-        >
-          Salvar
-        </button>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
