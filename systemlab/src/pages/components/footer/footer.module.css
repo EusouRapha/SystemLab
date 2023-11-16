@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+
+    margin-bottom: 30px;
+    margin-right: 100px;
+    margin-left: 50px;
+    z-index: -5;
+}
