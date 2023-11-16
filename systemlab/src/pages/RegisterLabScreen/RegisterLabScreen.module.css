@@ -5,12 +5,13 @@
 }
 
 .title{
-    font-size: 128px;
+    font-size: 100px;
     font-weight: 700;
     color: #1053b7;
 }
 
 .dropboxTitle{
+    margin-top: 0;
     font-size: 40px;
     font-weight: 500;
     color: #1053b7;

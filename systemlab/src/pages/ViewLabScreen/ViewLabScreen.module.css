@@ -5,7 +5,7 @@
 }
 
 .title{
-    font-size: 128px;
+    font-size: 100px;
     font-weight: 700;
     color: #1053b7;
 }
@@ -14,7 +14,17 @@
     font-size: 40px;
     font-weight: 500;
     color: #1053b7;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
+}
+
+.input{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #1053b7;
+    border-radius: 20px;
 }
 
 .labsContainer{
