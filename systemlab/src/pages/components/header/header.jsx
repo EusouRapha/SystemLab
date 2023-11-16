@@ -3,6 +3,7 @@ import Images from "../../../assets";
 import styles from "./header.module.css";
 
 const Header = () => {
+  // to="/" navega para a tela inicial, no caso a home
   return (
     <div className={styles.Container}>
       <Link to="/">

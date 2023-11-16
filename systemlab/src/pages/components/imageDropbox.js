@@ -5,6 +5,7 @@ const ImageDropbox = ({ onImageUpload, savedLab }) => {
   const [isUploadSuccess, setIsUploadSuccess] = useState(false);
 
   useEffect(() => {
+    // pega o savedLab por parametro da tela de registro, se tiver salvo um lab ele reseta o dropbox para a mensagem padrão.
     setIsUploadSuccess(false);
   }, [savedLab]);
 
@@ -19,7 +20,10 @@ const ImageDropbox = ({ onImageUpload, savedLab }) => {
     [onImageUpload]
   );
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop }); //usamos a lib react-dropzone que forcene o componente e funções dela
+
+  //isUploadSuccess é se o cara colocou uma imagem, mostra as frases abaixo
+  //isDragActive é se ele tiver arrastando uma imagem no dropbox, mostra a mensagem abaixo
 
   return (
     <div {...getRootProps()} style={dropboxStyle}>

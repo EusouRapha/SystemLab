@@ -30,14 +30,13 @@
 .labsContainer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-
 }
 
 .labInnerContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 25px 25px;
 }
 
 .name{
