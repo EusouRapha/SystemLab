@@ -10,38 +10,35 @@ function RegisterLabScreen() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [shouldSave, setShouldSave] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(false); // informa se salvou para passar ao componente de dropbox
 
   useEffect(() => {
+    // sempre que a pessoa colocar uma imagem ou digitar algo no nome e descrição é chamado
     if (name != "" && description != "" && image != "") {
+      // confere se a pessoa preencheu tudo e ja pode salvar
       setShouldSave(true);
     }
   }, [name, description, image]);
 
   const onSave = () => {
-    addMock(name, description, image);
+    addMock(name, description, image); // create, adiciona no mock o que o usuario salvou
 
     var resposta = window.confirm(
+      // chama uma janela no navegador para o usuário clicar em ok ou em cancelar, se ok a reposta = true
       "Cadastro bem-sucedido! Clique em OK para continuar."
     );
     setSaved(resposta);
 
     if (resposta) {
+      // reseta as variaveis
       setName("");
       setDescription("");
       setImage("");
     }
   };
 
-  const saveName = (e) => {
-    setName(e.target.value);
-  };
-
-  const saveDescription = (e) => {
-    setDescription(e.target.value);
-  };
-
   const handleImageUpload = (file) => {
+    // função para salvar a imagem enviada
     const reader = new FileReader();
     reader.onload = (event) => {
       setImage(event.target.result);
@@ -62,7 +59,7 @@ function RegisterLabScreen() {
             <input
               type="text"
               className={styles.input}
-              onChange={saveName}
+              onChange={(e) => setName(e.target.value)}
               value={name}
             />
           </div>
@@ -71,7 +68,7 @@ function RegisterLabScreen() {
             <input
               type="text"
               className={styles.input}
-              onChange={saveDescription}
+              onChange={(e) => setDescription(e.target.value)}
               value={description}
             />
           </div>
