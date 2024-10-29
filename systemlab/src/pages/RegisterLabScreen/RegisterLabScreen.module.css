@@ -1,83 +1,82 @@
-.innerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title{
-    font-size: 100px;
-    font-weight: 700;
-    color: #1053b7;
+.title {
+  font-size: 100px;
+  font-weight: 700;
+  color: #0b375b; /* Azul escuro */
 }
 
-.dropboxTitle{
-    margin-top: 0;
-    font-size: 40px;
-    font-weight: 500;
-    color: #1053b7;
+.dropboxTitle {
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 500;
+  color: #0b375b; /* Azul escuro */
 }
 
-.inputContainer{
-    margin-top: 50px;
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    width: 590px;
+.inputContainer {
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 590px;
 }
 
-.inputTitle{
-    margin: 0;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 48px;
-    color: #1053b7;
+.inputTitle {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #0b375b; /* Azul escuro */
 }
 
-.input{
-    display: flex;
-    border: none;
-    padding: 0;
-    border-bottom: 2px solid #1053b7;
-    width: 100%;
-    font-size: 20px;
-    padding-top: 20px;
+.input {
+  display: flex;
+  border: none;
+  padding: 0;
+  border-bottom: 2px solid #1053b7; /* Azul */
+  width: 100%;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
-.button{
-    padding: 20px;
-    margin-top: 30px;
-    border: 2px solid #1053B7;
-    border-radius: 20px;
-    background-color: transparent;
-    font-size: 30px;
-    font-weight: 500;
-    color: #1053B7;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+.button {
+  padding: 20px;
+  margin-top: 30px;
+  border: 2px solid #1053b7; /* Azul */
+  border-radius: 20px;
+  background-color: #0b375b; /* Azul escuro */
+  font-size: 30px;
+  font-weight: 500;
+  color: #a4d0f3; /* Azul claro */
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.button:hover{
-    background-color: #1053B7;
-    color: white;
-    transition: 0.3s ease-in-out;
+.button:hover {
+  background-color: #1a82d9; /* Azul claro */
+  color: #000000; /* Preto */
+  transition: 0.3s ease-in-out;
 }
 
-.buttonDesactive{
-    padding: 20px;
-    margin-top: 30px;
-    border: 2px solid #1053B7;
-    background-color: #979797 !important;
-    border-radius: 20px;
-    background-color: transparent;
-    font-size: 30px;
-    font-weight: 500;
-    color: white;
-    pointer-events: none;
-    transition: 0.3s ease-in-out;
+.buttonDesactive {
+  padding: 20px;
+  margin-top: 30px;
+  border: 2px solid #1053b7; /* Azul */
+  background-color: #979797 !important; /* Cinza */
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
 }
 
-.saved{
-    font-size: 20px;
-    font-weight: 500;
-    color: green;
+.saved {
+  font-size: 20px;
+  font-weight: 500;
+  color: green;
 }

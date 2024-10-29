@@ -8,13 +8,14 @@ function HomeScreen() {
   const link2Ref = useRef(null);
   const footerLinkRef = useRef(null);
 
-
   const handleKeyDown = (event) => {
     if (event.key === "Tab") {
       event.preventDefault();
       if (document.activeElement === link1Ref.current) {
         link2Ref.current.focus();
-      } else {
+      } else if (document.activeElement === link2Ref.current) {
+        footerLinkRef.current.focus();
+      } else if (document.activeElement === footerLinkRef.current) {
         link1Ref.current.focus();
       }
     }

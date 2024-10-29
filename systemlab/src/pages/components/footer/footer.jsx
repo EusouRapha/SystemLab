@@ -13,11 +13,11 @@ const Footer = ({ footerLinkRef }) => {
     <div className={styles.container}>
       <Link
         to="https://www.cefetmg.br/"
-        tabIndex="0"
-        ref={footerLinkRef}
         onKeyDown={handleKeyDown}
+        tabIndex="0" /* Adiciona tabIndex para permitir foco */
+        ref={footerLinkRef}
       >
-        <img src={images.cefet} alt="cefet" />
+        <img src={images.cefet} alt="Redirecionar para o site do CEFET" />
       </Link>
     </div>
   );

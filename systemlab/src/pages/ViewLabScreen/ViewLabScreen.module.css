@@ -1,53 +1,53 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title{
-    font-size: 100px;
-    font-weight: 700;
-    color: #1053b7;
+.title {
+  font-size: 100px;
+  font-weight: 700;
+  color: #0b375b;
 }
 
-.subTitle{
-    font-size: 40px;
-    font-weight: 500;
-    color: #1053b7;
-    margin-bottom: 40px;
+.subTitle {
+  font-size: 40px;
+  font-weight: 500;
+  color: #0b375b;
+  margin-bottom: 40px;
 }
 
-.input{
-    width: 400px;
-    height: 40px;
-    margin-bottom: 50px;
-    padding: 10px;
-    font-size: 20px;
-    border: 2px solid #1053b7;
-    border-radius: 20px;
+.input {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #0b375b;
+  border-radius: 20px;
 }
 
-.labsContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.labsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.labInnerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25px 25px;
+.labInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 25px;
 }
 
-.name{
-    margin: 0;
-    margin-bottom: 16px;
-    font-size: 30px;
-    color: #1053B7
+.name {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 30px;
+  color: #0b375b;
 }
 
-.image{
-    width: 200px;
-    height: 130px;
-    border-radius: 20px;
+.image {
+  width: 200px;
+  height: 130px;
+  border-radius: 20px;
 }

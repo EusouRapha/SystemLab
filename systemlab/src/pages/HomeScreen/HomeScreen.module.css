@@ -1,3 +1,4 @@
+/* HomeScreen.module.css */
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -5,12 +6,14 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: #ffffff; /* Fundo claro padrão */
+  color: #000000; /* Texto padrão */
 }
 
 .title {
   font-size: 100px;
   font-weight: 800;
-  color: #1053b7;
+  color: #0b375b;
 }
 
 .buttonContainer {
@@ -28,18 +31,29 @@
   text-decoration: none;
   border: 2px solid #1053b7;
   border-radius: 20px;
-  background-color: transparent;
+  background-color: #0b375b;
   font-size: 40px;
   font-weight: 700;
-  color: #1053b7;
+  color: #a4d0f3;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .link:hover,
 .link:focus {
-  background-color: #1053b7;
-  color: white;
+  background-color: #1a82d9;
+  color: #000000;
   transition: 0.3s ease-in-out;
 }
-    
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.iconButton:hover,
+.iconButton:focus {
+  color: #1a82d9;
+}

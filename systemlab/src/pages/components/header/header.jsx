@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className={styles.Container}>
       <Link to="/">
-        <img src={Images.home} alt="home" />
+        <img src={Images.home} alt="Voltar para a tela principal" />
       </Link>
     </div>
   );

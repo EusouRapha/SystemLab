@@ -1,12 +1,18 @@
-.container{
-    display: flex;
-    justify-content: flex-start;
-    /* width: 100%; */
+.container {
+  display: flex;
+  justify-content: flex-start;
+  /* width: 100%; */
 
-    position: fixed;
-    bottom: 0;
+  position: fixed;
+  bottom: 0;
 
-    margin-bottom: 30px;
-    margin-right: 100px;
-    margin-left: 50px;
+  margin-bottom: 30px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+.container :focus,
+.container :hover {
+  filter: brightness(0.1); /* Ajusta o brilho da imagem */
+  transition: filter 0.3s ease-in-out;
 }
