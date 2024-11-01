@@ -4,6 +4,8 @@ import lab3 from "./lab3.png";
 import lab4 from "./lab4.png";
 import home from "./home.svg";
 import cefet from "./cefet.svg";
+import moon from "./moon.png";
+import sun from "./sun.png";
 
 const images = {
   lab1,
@@ -12,6 +14,8 @@ const images = {
   lab4,
   home,
   cefet,
+  moon,
+  sun,
 };
 
 export default images;

@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { mock } from "../../utils/mock";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
 import styles from "./ViewLabScreen.module.css";
+import { NightModeContext } from "../../context/nightMode";
 
 function ViewLabScreen() {
   const [searchLab, setSeachLab] = useState("");
   const [mockFiltered, setMockFiltered] = useState(mock);
+
+  const [mode] = useContext(NightModeContext);
 
   useEffect(() => {
     search(searchLab);
@@ -38,7 +41,13 @@ function ViewLabScreen() {
       <div className={styles.labsContainer}>
         {mockFiltered.map((lab, index) => (
           <div key={index} className={styles.labInnerContainer}>
-            <p className={styles.name}>{lab.name}</p>
+            <p
+              className={`${styles.name} ${
+                mode === "dark" ? styles.nameNightMode : ""
+              }`}
+            >
+              {lab.name}
+            </p>
             <img
               src={lab.image}
               alt={lab.description}
@@ -51,22 +60,36 @@ function ViewLabScreen() {
   };
 
   return (
-    <>
+    <div className={`${mode === "dark" ? styles.outNightModeContainer : ""}`}>
       <Header />
       <div className={styles.container}>
-        <h1 className={styles.title}>Visualizar Laboratórios</h1>
-        <p className={styles.subTitle}>Escolha um laboratório</p>
+        <h1
+          className={`${styles.title} ${
+            mode === "dark" ? styles.titleNightMode : ""
+          }`}
+        >
+          Visualizar Laboratórios
+        </h1>
+        <p
+          className={`${styles.subTitle} ${
+            mode === "dark" ? styles.subTitleNightMode : ""
+          }`}
+        >
+          Escolha um laboratório
+        </p>
         <input
           type="text"
           placeholder="Busque aqui um laboratório"
           value={searchLab}
           onChange={(e) => setSeachLab(e.target.value)}
-          className={styles.input}
+          className={`${styles.input} ${
+            mode === "dark" ? styles.inputNightMode : ""
+          }`}
         />
         {RenderLabs()}
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

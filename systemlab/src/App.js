@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen";
 import RegisterLabScreen from "./pages/RegisterLabScreen";
 import ViewLabScreen from "./pages/ViewLabScreen";
+import "./theme.css";
 
 function App() {
   return (

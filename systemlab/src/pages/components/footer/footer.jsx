@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import images from "../../../assets";
 import styles from "./footer.module.css";
+import { Slider } from "../slider/slider";
+import { NightModeContext } from "../../../context/nightMode";
 
 const Footer = ({ footerLinkRef }) => {
   const handleKeyDown = (event) => {
@@ -9,6 +12,8 @@ const Footer = ({ footerLinkRef }) => {
     }
   };
 
+  const [mode] = useContext(NightModeContext);
+
   return (
     <div className={styles.container}>
       <Link
@@ -16,9 +21,13 @@ const Footer = ({ footerLinkRef }) => {
         onKeyDown={handleKeyDown}
         tabIndex="0" /* Adiciona tabIndex para permitir foco */
         ref={footerLinkRef}
+        className={`${styles.containerLink} ${
+          mode === "dark" ? styles.containerLinkNightMode : ""
+        }`}
       >
         <img src={images.cefet} alt="Redirecionar para o site do CEFET" />
       </Link>
+      <Slider />
     </div>
   );
 };

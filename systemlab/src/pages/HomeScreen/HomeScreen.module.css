@@ -6,14 +6,22 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #ffffff; /* Fundo claro padrão */
-  color: #000000; /* Texto padrão */
+  background-color: var(--white); /* Fundo claro padrão */
+  color: var(--black); /* Texto padrão */
+}
+
+.containerNightMode {
+  background-color: var(--blue-dark);
 }
 
 .title {
   font-size: 100px;
   font-weight: 800;
-  color: #0b375b;
+  color: var(--blue-dark);
+}
+
+.titleNightMode {
+  color: var(--blue-light);
 }
 
 .buttonContainer {
@@ -29,31 +37,30 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  border: 2px solid #1053b7;
+  border: 2px solid var(--blue);
   border-radius: 20px;
-  background-color: #0b375b;
+  background-color: var(--blue-dark);
   font-size: 40px;
   font-weight: 700;
-  color: #a4d0f3;
+  color: var(--blue-light);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .link:hover,
 .link:focus {
-  background-color: #1a82d9;
-  color: #000000;
+  background-color: var(--blue-medium-light);
+  color: var(--black);
   transition: 0.3s ease-in-out;
 }
 
-.iconButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
+.linkNightMode {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
 }
 
-.iconButton:hover,
-.iconButton:focus {
-  color: #1a82d9;
-}
+.linkNightMode:hover,
+.linkNightMode:focus {
+  background-color: var(--blue);
+  color: var(--white);
+}   

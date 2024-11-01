@@ -9,10 +9,21 @@
   margin-bottom: 30px;
   margin-right: 100px;
   margin-left: 50px;
+  gap: 30px;
 }
 
-.container :focus,
-.container :hover {
+.containerLink :focus,
+.containerLink :hover {
   filter: brightness(0.1); /* Ajusta o brilho da imagem */
+  transition: filter 0.3s ease-in-out;
+}
+
+.containerLinkNightMode{
+  filter: brightness(2); /* Ajusta o brilho da imagem */
+}
+
+.containerLinkNightMode :focus,
+.containerLinkNightMode :hover {
+  filter: brightness(10); /* Ajusta o brilho da imagem */
   transition: filter 0.3s ease-in-out;
 }

@@ -1,20 +1,41 @@
-.innerContainer {
+.outNightModeContainer{
+  min-height: 100vh;
+  background-color: var(--blue-dark);
+  position: absolute;
+  top: 0;
+  min-width: 100vw;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+}
+
+.containerNightMode {
+  background-color: var(--blue-dark);
 }
 
 .title {
   font-size: 100px;
   font-weight: 700;
-  color: #0b375b; /* Azul escuro */
+  color: var(--blue-dark); /* Azul escuro */
+}
+
+.titleNightMode{
+  color: var(--blue-light);
 }
 
 .dropboxTitle {
   margin-top: 0;
   font-size: 40px;
   font-weight: 500;
-  color: #0b375b; /* Azul escuro */
+  color: var(--blue-dark); /* Azul escuro */
+}
+
+.dropboxTitleNightMode {
+  color: var(--blue-light);
 }
 
 .inputContainer {
@@ -30,47 +51,69 @@
   font-size: 48px;
   font-weight: 500;
   line-height: 48px;
-  color: #0b375b; /* Azul escuro */
+  color: var(--blue-dark); /* Azul escuro */
+}
+
+.inputTitleNightMode{
+  color: var(--blue-light);
 }
 
 .input {
   display: flex;
   border: none;
   padding: 0;
-  border-bottom: 2px solid #1053b7; /* Azul */
+  border-bottom: 2px solid var(--blue);
   width: 100%;
   font-size: 20px;
   padding-top: 20px;
+  color: var(--blue-dark);
+}
+
+.inputNightMode{
+  border-bottom: 2px solid var(--blue-light);
+  background-color: var(--blue-dark);
+  color: var(--blue-light);
 }
 
 .button {
   padding: 20px;
   margin-top: 30px;
-  border: 2px solid #1053b7; /* Azul */
+  border: 2px solid var(--blue); /* Azul */
   border-radius: 20px;
-  background-color: #0b375b; /* Azul escuro */
+  background-color: var(--blue-dark); /* Azul escuro */
   font-size: 30px;
   font-weight: 500;
-  color: #a4d0f3; /* Azul claro */
+  color: var(--blue-light); /* Azul claro */
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .button:hover {
-  background-color: #1a82d9; /* Azul claro */
-  color: #000000; /* Preto */
+  background-color: var(--blue-medium-light); /* Azul claro */
+  color: var(--black); /* Preto */
+  transition: 0.3s ease-in-out;
+}
+
+.buttonNightMode{
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+.buttonNightMode:hover {
+  background-color: var(--blue);
+  color: var(--white);
   transition: 0.3s ease-in-out;
 }
 
 .buttonDesactive {
   padding: 20px;
   margin-top: 30px;
-  border: 2px solid #1053b7; /* Azul */
-  background-color: #979797 !important; /* Cinza */
+  border: 2px solid var(--blue); /* Azul */
+  background-color: var(--grey) !important; /* Cinza */
   border-radius: 20px;
   font-size: 30px;
   font-weight: 500;
-  color: white;
+  color: var(--white);
   pointer-events: none;
   transition: 0.3s ease-in-out;
 }
@@ -78,5 +121,9 @@
 .saved {
   font-size: 20px;
   font-weight: 500;
-  color: green;
+  color: var(--green);
+}
+
+.savedNightMode {
+  color: var(--green-dark);
 }

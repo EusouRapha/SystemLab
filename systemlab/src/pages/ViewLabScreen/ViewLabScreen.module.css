@@ -1,3 +1,11 @@
+.outNightModeContainer{
+  min-height: 100vh;
+  background-color: var(--blue-dark);
+  position: absolute;
+  top: 0;
+  min-width: 100vw;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,14 +15,22 @@
 .title {
   font-size: 100px;
   font-weight: 700;
-  color: #0b375b;
+  color: var(--blue-dark);
+}
+
+.titleNightMode {
+  color: var(--blue-light);
 }
 
 .subTitle {
   font-size: 40px;
   font-weight: 500;
-  color: #0b375b;
+  color: var(--blue-dark);
   margin-bottom: 40px;
+}
+
+.subTitleNightMode {
+  color: var(--blue-light);
 }
 
 .input {
@@ -23,8 +39,18 @@
   margin-bottom: 50px;
   padding: 10px;
   font-size: 20px;
-  border: 2px solid #0b375b;
+  border: 2px solid var(--blue-dark);
   border-radius: 20px;
+}
+
+.input::placeholder {
+  color: var(--blue-dark);
+}
+
+.inputNightMode {
+  border: 2px solid var(--blue);
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
 }
 
 .labsContainer {
@@ -43,7 +69,11 @@
   margin: 0;
   margin-bottom: 16px;
   font-size: 30px;
-  color: #0b375b;
+  color: var(--blue-dark);
+}
+
+.nameNightMode {
+  color: var(--blue-light);
 }
 
 .image {

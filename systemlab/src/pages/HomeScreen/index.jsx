@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/footer/footer";
 import styles from "./HomeScreen.module.css";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { NightModeContext } from "../../context/nightMode";
 
 function HomeScreen() {
   const link1Ref = useRef(null);
   const link2Ref = useRef(null);
   const footerLinkRef = useRef(null);
+
+  const [mode] = useContext(NightModeContext);
 
   const handleKeyDown = (event) => {
     if (event.key === "Tab") {
@@ -23,12 +26,24 @@ function HomeScreen() {
 
   return (
     <>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Olá, gestor</h1>
+      <div
+        className={`${styles.container} ${
+          mode === "dark" ? styles.containerNightMode : ""
+        }`}
+      >
+        <h1
+          className={`${styles.title} ${
+            mode === "dark" ? styles.titleNightMode : ""
+          }`}
+        >
+          Olá, gestor
+        </h1>
         <div className={styles.buttonContainer}>
           <Link
             to="/cadastrarlaboratorios"
-            className={styles.link}
+            className={`${styles.link} ${
+              mode === "dark" ? styles.linkNightMode : ""
+            }`}
             tabIndex="0"
             ref={link1Ref}
             onKeyDown={handleKeyDown}
@@ -37,7 +52,9 @@ function HomeScreen() {
           </Link>
           <Link
             to="/visualizarlaboratorios"
-            className={styles.link}
+            className={`${styles.link} ${
+              mode === "dark" ? styles.linkNightMode : ""
+            }`}
             tabIndex="0"
             ref={link2Ref}
             onKeyDown={handleKeyDown}
