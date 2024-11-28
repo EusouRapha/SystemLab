@@ -11,7 +11,6 @@ Execute o seguinte comando para instalar as dependências do projeto:
 4. Execute o aplicativo:
 Inicie o aplicativo com o seguinte comando:
 “‘ npm start “‘
-1
 O navegador padrão será aberto automaticamente, mas se isso não acontecer,
 você pode acessar manualmente em [http://localhost:3000](http://localhost:3000).
 —
